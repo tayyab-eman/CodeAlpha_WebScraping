@@ -1,63 +1,51 @@
-# CodeAlpha Data Analytics Internship — Web Source Project
+# CodeAlpha Data Analytics Internship — Task 1: Web Scraping
 
-This project contains all 4 CodeAlpha Data Analytics tasks, using public web sources.
+## Objective
 
-## Tasks and sources
+The objective of this task is to collect structured data from a publicly available web page using Python web scraping techniques.
 
-### Task 1 — Web Scraping
-Source: Wikipedia — List of countries and dependencies by population
+## Source
+
+Wikipedia — List of countries and dependencies by population
+
 https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_population
 
-Tools: Requests, BeautifulSoup, Pandas
+## Tools Used
 
-Output:
+- Python
+- Requests
+- BeautifulSoup
+- Pandas
+
+## Data Collected
+
+The following information was extracted from the webpage:
+
+- Country / Location
+- Population
+- Percentage of world population
+- Date
+- Source
+
+## Output
+
+The scraped dataset is saved as:
+
 `data/country_population.csv`
 
-### Task 2 — Exploratory Data Analysis (EDA)
-Source: Our World in Data — Population, 1950 to 2023
-https://ourworldindata.org/grapher/population-unwpp
+## Method
 
-Tools: Pandas, NumPy, Matplotlib
+1. Sent a request to the public webpage using Requests.
+2. Retrieved the webpage HTML.
+3. Used BeautifulSoup to locate the population table.
+4. Extracted the table rows and relevant columns.
+5. Used Pandas to organize the extracted data.
+6. Saved the final dataset as a CSV file.
 
-Output:
-`outputs/task2_eda_summary.txt`
+## Result
 
-### Task 3 — Data Visualization
-Source: Our World in Data — Population, 1950 to 2023
-https://ourworldindata.org/grapher/population-unwpp
+The web scraping process was successfully completed and the extracted population data was saved in CSV format.
 
-Outputs:
-- `outputs/task3_top10_population_2023.png`
-- `outputs/task3_population_trend.png`
-- `outputs/task3_world_population_growth.png`
+## Project
 
-### Task 4 — Sentiment Analysis
-Source: UCI Machine Learning Repository — Sentiment Labelled Sentences
-https://archive.ics.uci.edu/dataset/331/sentiment+labelled+sentences
-
-The UCI dataset contains 3,000 positive/negative review sentences from IMDb, Amazon and Yelp. This project uses VADER, a lexicon-based sentiment method, to produce positive/negative/neutral labels.
-
-Output:
-`outputs/task4_sentiment_results.csv`
-
-## Installation
-
-```bash
-python -m venv .venv
-.venv\Scripts\activate
-pip install -r requirements.txt
-```
-
-## Run
-
-```bash
-python task1_web_scraping.py
-python task2_eda.py
-python task3_visualization.py
-python task4_sentiment_analysis.py
-```
-
-## Important
-The scripts download/read public data when they are run. Keep the source links in the README and report so the dataset origin is clear.
-
-Do not upload your `.venv` folder to GitHub.
+This repository contains the source code and output dataset for CodeAlpha Data Analytics Internship — Task 1.
